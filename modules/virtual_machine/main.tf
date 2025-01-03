@@ -2,7 +2,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   name                            = "vm-${var.application_name}-${var.environment_name}"
   size                            = "Standard_D2s_v3"
   admin_username                  = "adminuser"
-  admin_password                  = "#AdminPwd_1"
+  admin_password                  = ""
   disable_password_authentication = false
   network_interface_ids           = [azurerm_network_interface.main.id]
   resource_group_name             = var.resource_group_name
